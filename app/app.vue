@@ -1,5 +1,5 @@
 <script setup>
-import NavBar from '../components/NavBar.vue'   // 👈 coincide EXACTO con el nombre del archivo
+import NavBar from './components/NavBar.vue'  // respeta el mismo casing del archivo
 </script>
 
 <template>
