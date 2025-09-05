@@ -1,7 +1,11 @@
-// nuxt.config.ts
 export default defineNuxtConfig({
-  srcDir: 'app/',                       // <<— clave para usar /app como raíz
+  srcDir: 'app/',
   modules: ['@nuxt/content'],
   components: [{ path: '~/components', pathPrefix: false }],
-  app: { head: { title: 'Catálogo de Laptops' } }
+  nitro: {
+    prerender: {
+      failOnError: false   // no detiene el build por 404
+      // routes: []        // o define rutas extra si las necesitas
+    }
+  }
 })
